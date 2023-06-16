@@ -1,0 +1,14 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Dice_Roll_MVVM.Views.MainMenu">
+	<Grid>
+		<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+			<TextBlock Text="Main Menu"/>
+			<Button x:Name="BT_Menu_Dice" Content="Dice Roll"/>
+			<Button x:Name="BT_Exit" Content="Exit"/>
+		</StackPanel>
+	</Grid>
+</UserControl>
