@@ -1,0 +1,33 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 mc:Ignorable="d" 
+             x:Class="Dice_Roll_MVVM.Views.DiceView">
+	
+	<Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+		
+		<StackPanel>
+			<TextBlock Text="{Binding TB_Turns}" HorizontalAlignment="Center"/>
+			<ContentControl Width="250" Height="250" Content="{Binding Img}" BorderThickness="2" BorderBrush="Black"/>
+			
+			<StackPanel Orientation="Horizontal">
+				<StackPanel Orientation="Vertical">
+					<StackPanel Orientation="Horizontal">
+						<TextBlock Text="Player 1's score:" Width="120" Height="30"/>
+						<TextBlock Text="{Binding TB_P1}" Width="30" Height="30"/>
+					</StackPanel>
+					<StackPanel Orientation="Horizontal">
+						<TextBlock Text="Player 2's score:" Width="120" Height="30"/>
+						<TextBlock Text="{Binding TB_P2}" Width="30" Height="30"/>
+					</StackPanel>
+				</StackPanel>
+				<StackPanel Orientation="Vertical">
+					<Button x:Name="BT_Roll" Content="Roll the dice!" Command="{Binding	BT_Roll_Click}"
+					Width="100" Height="30" HorizontalAlignment="Center"/>
+					<Button x:Name="BT_Back" Content="Back" Command="{Binding BT_Back_Click}"/>
+				</StackPanel>
+			</StackPanel>
+		</StackPanel>
+	</Grid>
+</UserControl>
